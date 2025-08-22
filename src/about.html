@@ -6,6 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tentang Kami - PT Albatros Logistik Express</title>
   <link href="./output.css" rel="stylesheet">
+  <style>
+    /* Mobile navigation styles */
+    @media (max-width: 768px) {
+      #navbar-dropdown {
+        transition: all 0.3s ease-in-out;
+      }
+      
+      #navbar-dropdown.hidden {
+        display: none !important;
+      }
+      
+      #navbar-dropdown:not(.hidden) {
+        display: block !important;
+      }
+    }
+  </style>
 </head>
 
 <body class="bg-white">
@@ -140,6 +156,46 @@
     </div>
   </footer>
 
+  <script>
+    // Fallback mobile navigation - ensures mobile navigation works immediately
+    document.addEventListener("DOMContentLoaded", () => {
+      const mobileMenuButton = document.querySelector('[data-collapse-toggle="navbar-dropdown"]');
+      const mobileMenu = document.getElementById('navbar-dropdown');
+      
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+          mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+          
+          if (isExpanded) {
+            mobileMenu.classList.add('hidden');
+          } else {
+            mobileMenu.classList.remove('hidden');
+          }
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+            mobileMenu.classList.add('hidden');
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
+          }
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+    });
+  </script>
   <script src="./js/about.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.js"></script>
 </body>
