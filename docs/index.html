@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Albatros Logistik Express</title>
+
+    <link href="./output.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gray-100">
+    <nav class="bg-white border-gray-200 shadow-md fixed w-full z-50 top-0 left-0">
+        <div class="w-full flex flex-wrap items-center justify-between p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="docs/images/Logo.png" class="h-8" alt="Logo" />
+            </a>
+
+            <button data-collapse-toggle="navbar-dropdown" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                aria-controls="navbar-dropdown" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+
+            <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+                <ul
+                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
+                    <li><a href="#" class="py-2 px-3 text-blue-700">Home</a></li>
+                    <li><a href="services.html" class="py-2 px-3 hover:text-blue-700">Services</a></li>
+                    <li><a href="about.html" class="py-2 px-3 hover:text-blue-700">About</a></li>
+                    <li><a href="contact.html" class="py-2 px-3 hover:text-blue-700 font-semibold">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative h-screen bg-cover bg-center" style="background-image: url('docs/images/IMG_8933.JPG');">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="relative z-20 flex items-center justify-center h-full px-4 text-center">
+            <div>
+                <h1 id="hero-title"
+                    class="text-4xl font-bold text-white sm:text-5xl md:text-6xl opacity-0 transition-opacity duration-1000">
+                    Selamat Datang
+                </h1>
+                <p id="hero-subtitle"
+                    class="mt-4 text-lg text-gray-200 max-w-2xl mx-auto opacity-0 transition-opacity duration-1000 delay-300">
+                    Layanan terbaik dengan harga terjangkau untuk kebutuhan logistik Anda.
+                </p>
+                <div id="hero-buttons"
+                    class="mt-6 flex justify-center gap-4 opacity-0 transition-opacity duration-1000 delay-500">
+                    <a href="#layanan" id="btnLayanan"
+                        class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                        Lihat Layanan
+                    </a>
+                    <a href="https://wa.me/0817731443"
+                        class="px-6 py-3 bg-white text-gray-800 rounded-lg hover:bg-gray-200 transition">
+                        Hubungi Kami
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+                Tentang Kami
+            </h2>
+            <p class="text-lg text-gray-700 mb-12">
+                PT Albatros Logistik Express adalah perusahaan yang bergerak di bidang jasa logistik, pengiriman, dan
+                distribusi. Kami berkomitmen memberikan layanan tepat waktu, aman, serta terpercaya bagi seluruh
+                pelanggan di Indonesia.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="p-6 bg-white rounded-2xl shadow-md">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-2">Visi Kami</h3>
+                    <p class="text-gray-700">
+                        Menjadi penyedia solusi logistik terbaik di Indonesia
+                    </p>
+                </div>
+                <div class="p-6 bg-white rounded-2xl shadow-md">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-2">Misi Kami</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 text-left">
+                        <li>Menjawab kebutuhan logistik Indonesia secara nasional dan global.</li>
+                        <li>Menggunakan teknologi tepat guna untuk efisiensi.</li>
+                        <li>Memberi manfaat bagi pelanggan dan investor, memperkuat ekonomi Indonesia
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <style>
+        #carousel-pelanggan .marquee {
+            position: relative;
+        }
+
+        #carousel-pelanggan .track {
+            width: max-content;
+            animation: marquee-scroll 25s linear infinite;
+        }
+
+        #carousel-pelanggan:hover .track {
+            animation-play-state: paused;
+        }
+
+        @keyframes marquee-scroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+
+    <div class="relative w-full min-h-screen flex items-center">
+        <div id="bg-hero" class="fade-bg absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000"
+            style="background-image: url('docs/images/IMG_9007.JPG');">
+        </div>
+        <div id="bg-overlay"
+            class="fade-bg absolute inset-0 bg-gradient-to-l from-transparent via-black/20 to-black/70 opacity-0 transition-opacity duration-1000 delay-300">
+        </div>
+        <div class="relative grid md:grid-cols-2 w-full z-10">
+            <section class="py-16 px-8 flex flex-col items-center text-center">
+                <h2 class="fade-up text-white text-3xl md:text-4xl font-bold max-w-md leading-snug mb-10"
+                    style="text-shadow: 4px 4px 8px rgba(0,0,0,0.8);">
+                    Kenapa Harus Memilih Kami?
+                </h2>
+                <div class="grid md:grid-cols-1 gap-8">
+                    <div class="fade-up p-6 bg-white rounded-xl shadow-sm shadow-blue-200 hover:shadow-lg transition">
+                        <div class="text-blue-600 text-4xl mb-4">🔒</div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Keamanan</h3>
+                        <p class="text-gray-600">Menjaga barang pelanggan dengan standar keamanan terbaik.</p>
+                    </div>
+                    <div class="fade-up p-6 bg-white rounded-xl shadow-sm shadow-blue-200 hover:shadow-lg transition">
+                        <div class="text-blue-600 text-4xl mb-4">⏱️</div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Ketepatan Waktu</h3>
+                        <p class="text-gray-600">Mengutamakan pengiriman cepat dan tepat waktu.</p>
+                    </div>
+                    <div class="fade-up p-6 bg-white rounded-xl shadow-sm shadow-blue-200 hover:shadow-lg transition">
+                        <div class="text-blue-600 text-4xl mb-4">📦</div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Keandalan</h3>
+                        <p class="text-gray-600">Layanan yang konsisten, aman, dan terpercaya.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <style>
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease-out;
+        }
+
+        .fade-up.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Pencapaian Kami</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                Didukung oleh armada besar, pengalaman luas, dan kepercayaan pelanggan di seluruh Indonesia.
+            </p>
+            <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div
+                    class="stat-card flex flex-col items-center bg-sky-100 rounded-2xl p-6 shadow-sm opacity-0 translate-y-6 transition-all duration-700">
+                    <img src="docs/images/icon-rating.png" alt="Pelanggan" class="h-16 w-16 mb-4">
+                    <h3 class="text-2xl font-bold text-blue-600">15K+</h3>
+                    <p class="text-gray-700 mt-2">Pelanggan Puas</p>
+                </div>
+                <div
+                    class="stat-card flex flex-col items-center bg-sky-100 rounded-2xl p-6 shadow-sm opacity-0 translate-y-6 transition-all duration-700">
+                    <img src="docs/images/distance.png" alt="Perjalanan" class="h-16 w-16 mb-4">
+                    <h3 class="text-2xl font-bold text-blue-600">1.5K+ km</h3>
+                    <p class="text-gray-700 mt-2">Total Perjalanan</p>
+                </div>
+                <div
+                    class="stat-card flex flex-col items-center bg-sky-100 rounded-2xl p-6 shadow-sm opacity-0 translate-y-6 transition-all duration-700">
+                    <img src="docs/images/fast-delivery.png" alt="Armada " class="h-16 w-16 mb-4">
+                    <h3 class="text-2xl font-bold text-blue-600">1.5K+</h3>
+                    <p class="text-gray-700 mt-2">Armada Kami</p>
+                </div>
+                <div
+                    class="stat-card flex flex-col items-center bg-sky-100 rounded-2xl p-6 shadow-sm opacity-0 translate-y-6 transition-all duration-700">
+                    <img src="docs/images/home.png" alt="Perjalanan Truk" class="h-16 w-16 mb-4">
+                    <h3 class="text-2xl font-bold text-blue-600">150K+</h3>
+                    <p class="text-gray-700 mt-2">lain</p>
+                </div>
+                <div
+                    class="stat-card flex flex-col items-center bg-sky-100 rounded-2xl p-6 shadow-sm opacity-0 translate-y-6 transition-all duration-700">
+                    <img src="docs/images/property.png" alt="Cabang Indonesia" class="h-16 w-16 mb-4">
+                    <h3 class="text-2xl font-bold text-blue-600">10+</h3>
+                    <p class="text-gray-700 mt-2">Lain2</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pelanggan" class="bg-white py-12 px-4">
+        <div class="max-w-screen-xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">
+                Pelanggan Kami
+            </h2>
+            <div id="carousel-pelanggan" class="relative w-full overflow-hidden">
+                <div class="marquee">
+                    <div class="track flex items-center gap-12 py-2">
+                        <img class="h-12 w-40 object-contain"
+                            src="https://www.astra-otoparts.com/Content/images/logo.png" alt="Astra" />
+                        <img class="h-12 w-40 object-contain"
+                            src="https://enkei.id/cdn/shop/files/Enkei_company_logo_svg.png?v=1731481606&width=600"
+                            alt="Enkei" />
+                        <img class="h-12 w-40 object-contain" src="https://www.cmwi.co.id/layouts/logo.png"
+                            alt="CMWI" />
+                        <img class="h-12 w-40 object-contain" src="docs/images/gohsyu.png" alt="Gohsyu" />
+                        <img class="h-12 w-40 object-contain"
+                            src="https://web.archive.org/web/20240914150344im_/http://syncrumlogistics.com/bundles/img/logo-syncrum.png"
+                            alt="Syncrum" />
+                        <img class="h-12 w-40 object-contain"
+                            src="https://enesis.com/wp-content/themes/enesis/images/logo_footer.svg" alt="Enesis" />
+                        <img class="h-12 w-40 object-contain"
+                            src="https://rayspeed.com/assets/gambar/logo_rayspeed_blue.webp" alt="Rayspeed" />
+                        <img class="h-12 w-40 object-contain" src="docs/images/c_logo_ci_en_new.png" alt="Nidec" />
+                        <img class="h-12 w-40 object-contain"
+                            src="https://www.astra-otoparts.com/Content/images/logo.png" alt="Astra" />
+                        <img class="h-12 w-40 object-contain"
+                            src="https://enkei.id/cdn/shop/files/Enkei_company_logo_svg.png?v=1731481606&width=600"
+                            alt="Enkei" />
+                        <img class="h-12 w-40 object-contain" src="https://www.cmwi.co.id/layouts/logo.png"
+                            alt="CMWI" />
+                        <img class="h-12 w-40 object-contain" src="docs/images/gohsyu.png" alt="Gohsyu" />
+                        <img class="h-12 w-40 object-contain"
+                            src="https://web.archive.org/web/20240914150344im_/http://syncrumlogistics.com/bundles/img/logo-syncrum.png"
+                            alt="Syncrum" />
+                        <img class="h-12 w-40 object-contain"
+                            src="https://enesis.com/wp-content/themes/enesis/images/logo_footer.svg" alt="Enesis" />
+                        <img class="h-12 w-40 object-contain"
+                            src="https://rayspeed.com/assets/gambar/logo_rayspeed_blue.webp" alt="Rayspeed" />
+                        <img class="h-12 w-40 object-contain" src="docs/images/c_logo_ci_en_new.png" alt="Nidec" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="notification"
+        class="hidden fixed bottom-5 right-5 z-[50] bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg transition transform translate-y-5 opacity-0">
+        Pesan berhasil dikirim!
+    </div>
+
+    <div class="relative w-full min-h-screen flex items-center">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('docs/images/image.jpg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-black/20 to-black/70"></div>
+        <div class="relative grid md:grid-cols-2 w-full z-10">
+            <div class="flex justify-center items-start text-center p-8">
+                <h1 class="text-white text-3xl md:text-4xl font-bold max-w-md leading-snug mt-0"
+                    style="text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
+                    Serahkan Kendala Anda Kepada Kami!
+                </h1>
+            </div>
+            <div id="form-wrapper" class="flex items-center justify-center p-8">
+                <div
+                    class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md opacity-0 translate-x-10 transition-all duration-700">
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label for="nama" class="block text-sm font-medium text-gray-700">Nama</label>
+                            <input type="text" id="nama" name="nama" required
+                                class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="nohp" class="block text-sm font-medium text-gray-700">No HP</label>
+                            <input type="tel" id="nohp" name="nohp" required
+                                class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="pesan" class="block text-sm font-medium text-gray-700">Pesan</label>
+                            <textarea id="pesan" name="pesan" rows="4" required
+                                class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700 transition">
+                            Kirim
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <footer class="bg-sky-700 text-white mt-0">
+        <div class="w-full mx-auto p-4 md:py-8">
+            <div class="md:flex md:justify-between md:items-start gap-8">
+                <div class="flex items-start space-x-4">
+                    <a href="/" class="flex items-center mb-4">
+                        <img src="docs/images/Logo.png" class="h-10 mt-6 mr-3" alt="Logo Perusahaan" />
+
+                    </a>
+                    <p class="text-blue-100 text-sm leading-relaxed">
+                        <b>PT Albatros Logistik Express</b><br>
+                        Jl. HM. Joyo Martono No.8, Bekasi Timur,
+                        Kota Bekasi, Indonesia 17113<br>
+                        Telp: (+6221) 8269-7571<br>
+                        Email: info@perusahaankita.co.id
+                    </p>
+                </div>
+            </div>
+
+            <hr class="my-6 border-sky-500" />
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div class="flex space-x-5">
+                    <a href="https://www.linkedin.com" target="_blank" class="text-blue-100 hover:text-white">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0V8zm7.5 0h4.8v2.17h.07c.67-1.26 2.3-2.6 4.73-2.6 5.06 0 6 3.33 6 7.66V24h-5v-7.67c0-1.83-.03-4.18-2.55-4.18-2.55 0-2.94 1.99-2.94 4.04V24h-5V8z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" class="text-blue-100 hover:text-white">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.326 24h11.495v-9.294H9.691v-3.622h3.13V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.919.001c-1.505 0-1.797.715-1.797 1.763v2.312h3.591l-.467 3.622h-3.124V24h6.125C23.403 24 24 23.403 24 22.674V1.326C24 .597 23.403 0 22.675 0z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/albatros.log/" target="_blank"
+                        class="text-blue-100 hover:text-white">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3a5.25 5.25 0 1 1 0 10.5a5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5a3.75 3.75 0 0 0 0-7.5zm5-2a.75.75 0 1 1 0 1.5a.75.75 0 0 1 0-1.5z" />
+                        </svg>
+                    </a>
+                </div>
+                <span class="text-sm text-blue-100">
+                    © 2025 <a href="/" class="hover:underline">PT Albatros Logistik Express</a>. Hak cipta dilindungi.
+                </span>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.js"></script>
+
+</body>
+
+</html>
