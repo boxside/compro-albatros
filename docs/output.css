@@ -80,6 +80,7 @@
     line-height: 1.5;
     -webkit-text-size-adjust: 100%;
     tab-size: 4;
+    overflow-y: scroll;
     font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
     font-feature-settings: var(--default-font-feature-settings, normal);
     font-variation-settings: var(--default-font-variation-settings, normal);
@@ -3122,3 +3123,14 @@
     }
   }
 }
+html, body {
+  overflow-y: scroll;          /* selalu ada scrollbar */
+  scrollbar-gutter: stable;    /* sisakan space buat scrollbar */
+}
+
+body {
+  padding-right: 0 !important; /* netralisir tambahan padding dari JS */
+}
+body.overflow-hidden {
+  padding-right: 0 !important; /* kalau flowbite kasih overflow-hidden */
+  }
