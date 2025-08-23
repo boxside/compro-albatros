@@ -222,25 +222,4 @@ setTimeout(() => {
     if (isiKonten) isiKonten.classList.remove("hidden");
 }, 20);
 
-// Smooth scroll for layanan button
-document.addEventListener("DOMContentLoaded", () => {
-    const btnLayanan = document.getElementById("btnLayanan");
-    
-    if (btnLayanan) {
-        btnLayanan.addEventListener("click", function (e) {
-            e.preventDefault();
-
-            const target = document.querySelector("#layanan");
-            if (target) {
-                const offset = -90;
-                const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
-                const offsetPosition = elementPosition + offset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: "smooth"
-                });
-            }
-        });
-    }
-});
+// Button navigation is now handled by normal HTML links
